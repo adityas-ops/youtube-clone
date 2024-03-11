@@ -23,4 +23,10 @@ app.use(express.static('public'));
 
 app.use(cookieParser());
 
+// create router
+app.get('/',(req,res)=>{
+    res.send("Server is working fine")
+})
+
+
 export  {app};
