@@ -23,10 +23,19 @@ app.use(express.static('public'));
 
 app.use(cookieParser());
 
+
+// route import 
+import userRouter from './routes/user.route.js';
+
+
+// routes declaration
+app.use('/api/v1/users',userRouter);
+
 // create router
 app.get('/',(req,res)=>{
     res.send("Server is working fine")
 })
+
 
 
 export  {app};
